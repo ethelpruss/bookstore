@@ -8,7 +8,7 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <!-- Custom css -->
-<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<link rel="stylesheet" type="text/css" href="/bookstore/css/custom.css">
 <!-- Fontawesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <!-- jQuery library -->
@@ -97,16 +97,16 @@ $result = mysqli_query(
 
     echo '<div class="col-sm-6 col-md-3">';
     echo '<div class="caption">';
-    echo '<h4> ' . $name . '</h4>';
+    echo '<h5> ' . $name . '</h5><br>';
     echo '</div>';
     echo '<div class="thumbnail">';
     echo '<div class="view overlay">';
-    echo '<img src="' . $image . '" alt="'. $name . '" class="img-fluid">';
+    echo '<img src="' . $image . '" alt="'. $name . '" class="img-responsive center-block">';
     echo '<div class="mask rgba-red-strong">';
     echo '</div>';
     echo '</div>';
     echo '<div class="caption">';
-    echo '<h5> ' . $price . '</h5>';
+    echo '<p class="text-secondary">' . $price . '</p>';
     echo '<p><a href="cart.php" class="btn btn-success" role="button">Add to Cart</a></p>';
     echo '</div>';
     echo '</div>';

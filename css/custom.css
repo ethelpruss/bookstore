@@ -21,9 +21,17 @@
 
     /* Add a gray background color and some padding to the footer */
     footer {
-      background-color: #9fb18e;
-      padding: 25px;
+      background-color: #9fb18e !important;
+      padding: 0;
+      margin: 0;
     }
+
+    .thumbnail .img-responsive  {
+      display: block;
+      max-width: 40%;
+      height: auto;
+      margin:0 auto;
+}
 
     .masthead {
       height: 10vh;
@@ -40,12 +48,12 @@
     }
     
     .btn.btn-success{
-        background-color:#566871;
+        background-color:#486470;
         border: none;
       }
 
     .btn.btn-success:hover{
-        background-color:#664662d5;
+        background-color:#486470f1;
       }
 
     footer.jumbotron{

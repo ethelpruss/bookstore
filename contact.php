@@ -7,7 +7,7 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <!-- Custom css -->
-<link rel="stylesheet" type="text/css" href="/bookstore/css/custom.css">
+<link rel="stylesheet" type="text/css" href="/bookstorebookstorebookstore/css/custom.css">
 <!-- Fontawesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
@@ -99,7 +99,7 @@
                     <div class="col-md-6">
                         <div class="md-form mb-0">
                             <input type="text" id="contactFormName" name="name" class="form-control" required>
-                            <label for="name" class="">Your name</label>
+                            <label for="name" class="form-text text-muted">Your name</label>
 
                         </div>
                     </div>
@@ -108,9 +108,8 @@
                     <!--Grid column-->
                     <div class="col-md-6">
                         <div class="md-form mb-0">
-                            <input type="email" id="email" name="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" required>
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                            <label for="email" class="">Your email</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                            <label for="email" class="form-text text-muted">Your email</label>
                         </div>
                     </div>
                     <!--Grid column-->
@@ -122,8 +121,8 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="md-form mb-0">
-                            <input type="text" id="subject" name="subject" class="form-control">
-                            <label for="subject" class="">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-control" required>
+                            <label for="subject" class="form-text text-muted">Subject</label>
                         </div>
                     </div>
                 </div>
@@ -136,8 +135,8 @@
                     <div class="col-md-12">
 
                         <div class="md-form">
-                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                            <label for="message">Your message</label>
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" required></textarea>
+                            <label for="message" class="form-text text-muted">Your message</label>
                         </div>
 
                     </div>

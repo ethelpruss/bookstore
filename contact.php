@@ -7,7 +7,7 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <!-- Custom css -->
-<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<link rel="stylesheet" type="text/css" href="/bookstore/css/custom.css">
 <!-- Fontawesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
@@ -19,43 +19,6 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-
-<!-- Contact form validation JavaScript -->
-<script>
-  function validateForm() {
-  var name =  document.getElementById('name').value;
-  if (name == "") {
-      document.getElementById('status').innerHTML = "Name cannot be empty";
-      return false;
-  }
-  var email =  document.getElementById('email').value;
-  if (email == "") {
-      document.getElementById('status').innerHTML = "Email cannot be empty";
-      return false;
-  } else {
-      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      if(!re.test(email)){
-          document.getElementById('status').innerHTML = "Email format invalid";
-          return false;
-      }
-  }
-  var subject =  document.getElementById('subject').value;
-  if (subject == "") {
-      document.getElementById('status').innerHTML = "Subject cannot be empty";
-      return false;
-  }
-  var message =  document.getElementById('message').value;
-  if (message == "") {
-      document.getElementById('status').innerHTML = "Message cannot be empty";
-      return false;
-  }
-  document.getElementById('status').innerHTML = "Sending...";
-  document.getElementById('contact-form').submit();
-
-  }
-</script>
-</head>
 
 
 
@@ -135,8 +98,9 @@
                     <!--Grid column-->
                     <div class="col-md-6">
                         <div class="md-form mb-0">
-                            <input type="text" id="name" name="name" required class="form-control">
+                            <input type="text" id="contactFormName" name="name" class="form-control" required>
                             <label for="name" class="">Your name</label>
+
                         </div>
                     </div>
                     <!--Grid column-->
@@ -144,7 +108,8 @@
                     <!--Grid column-->
                     <div class="col-md-6">
                         <div class="md-form mb-0">
-                            <input type="text" id="email" name="email" class="form-control">
+                            <input type="email" id="email" name="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" required>
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                             <label for="email" class="">Your email</label>
                         </div>
                     </div>
@@ -178,13 +143,16 @@
                     </div>
                 </div>
                 <!--Grid row-->
+                <div class="text-center text-md-right">
+                <button type="submit" class="btn btn-outline-dark btn-lg" id="sendButton" >Send</button>
+            </div>
 
             </form>
 
-            <div class="text-center text-md-right">
-                <a class="btn btn-outline-dark btn-lg" onclick="validateForm()">Send</a>
+
+            <div id="status">
+            <p></p>
             </div>
-            <div class="status"></div>
         </div>
         <!--Grid column-->
 
@@ -227,3 +195,4 @@
 </footer>
 </body>
 </html>
+<script src="/bookstore/javascript/contact.js"></script>

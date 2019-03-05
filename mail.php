@@ -1,4 +1,5 @@
 <?php
+header('Location: ' . $_SERVER['HTTP_REFERER']);
 if(isset( $_POST['name']))
 $name = $_POST['name'];
 if(isset( $_POST['email']))
@@ -29,7 +30,7 @@ echo "Message cannot be empty.";
 die();
 }
 $content="From: $name \nEmail: $email \nMessage: $message";
-$recipient = "ethels.dropbox@gmail.com";
+$recipient = "neptune@localhost";
 $mailheader = "From: $email \r\n";
 mail($recipient, $subject, $content, $mailheader) or die("Error!");
 echo "Email sent!";

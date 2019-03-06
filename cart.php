@@ -3,6 +3,7 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
     }
 $status="";
+
 if (isset($_POST['action']) && $_POST['action']=="remove"){
 if(!empty($_SESSION["shopping_cart"])) {
     foreach($_SESSION["shopping_cart"] as $key => $value) {
@@ -65,10 +66,12 @@ if(isset($_SESSION["shopping_cart"])){
 <tbody>
 <tr>
 <td></td>
-<td>ITEM NAME</td>
-<td>QUANTITY</td>
-<td>UNIT PRICE</td>
-<td>ITEMS TOTAL</td>
+<td>Name</td>
+<td>Quantity</td>
+<td>Unit price</td>
+<td>Total</td>
+<td></td>
+
 </tr>	
 <?php		
 foreach ($_SESSION["shopping_cart"] as $product){
@@ -78,10 +81,6 @@ foreach ($_SESSION["shopping_cart"] as $product){
 <img src='<?php echo $product["image"]; ?>' width="50" height="40" />
 </td>
 <td><?php echo $product["name"]; ?>
-<form method='post' action=''>
-<input type='hidden' name='code' value="<?php echo $product["code"]; ?>" />
-<input type='hidden' name='action' value="remove" />
-<button type='submit' class='btn btn-danger btn-sm'><i class="fas fa-trash-alt"></i></button>
 </form>
 </td>
 <td>
@@ -104,6 +103,10 @@ value="5">5</option>
 </td>
 <td><?php echo "$".$product["price"]; ?></td>
 <td><?php echo "$".$product["price"]*$product["quantity"]; ?></td>
+<td><form method='post' action=''>
+<input type='hidden' name='code' value="<?php echo $product["code"]; ?>" />
+<input type='hidden' name='action' value="remove" />
+<button type='submit' class='btn btn-danger btn-sm'><i class="fas fa-trash-alt"></i></button></td>
 </tr>
 <?php
 $total_price += ($product["price"]*$product["quantity"]);

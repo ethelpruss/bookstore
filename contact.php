@@ -87,7 +87,7 @@
                 </div>
                 <!--Grid row-->
                 <div class="text-center text-md-right">
-                <button type="submit" class="btn btn-outline-dark btn-lg" id="sendButton">Send</button>
+                <button type="submit" class="btn btn-outline-dark btn-lg" id="sendButton"><i class="fas fa-envelope fa-lg" style="color:#b04e3b;"></i></button>
             </div>
 
             </form>

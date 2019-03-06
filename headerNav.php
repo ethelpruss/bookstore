@@ -48,9 +48,7 @@
       <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
     </form>
     <a class="navbar-brand" href="cart.php">
-    <span class="fa-stack fa-sm">
-        <i class="fa fa-square fa-stack-2x"></i>
-        <i class="fa fa-shopping-cart fa-stack-1x"></i>
+    <button type="button" class="btn btn-light btn-sm"><i class="fa fa-shopping-cart" style="color:#b04e3b;"></i> </button>
     </span>
     </a>
   </div>

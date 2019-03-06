@@ -28,7 +28,7 @@
 <div class="jumbotron">
   <div class="container text-center">
     <h1>Checkout</h1>      
-    <p><i class="fas fa-ad fa-10x" style="color:#6c5772;"></i></i></p>
+    <p>Something</p>
   </div>
 </div>
 

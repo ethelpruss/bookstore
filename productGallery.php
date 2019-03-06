@@ -46,7 +46,7 @@ $result = mysqli_query(
   }else{
       $array_keys = array_keys($_SESSION["shopping_cart"]);
       if(in_array($code,$array_keys)) {
-    $status = "<div class='alert alert-warning' role='alert'>Product is already in your cart!</div>";	
+      $status = "<div class='alert alert-warning' role='alert'>Product is already in your cart!</div>";	
       } else {
       $_SESSION["shopping_cart"] = array_merge(
       $_SESSION["shopping_cart"],

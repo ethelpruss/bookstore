@@ -42,12 +42,11 @@ $result = mysqli_query(
 
     if(empty($_SESSION["shopping_cart"])) {
       $_SESSION["shopping_cart"] = $cartArray;
-      $status = "<div class='alert alert-warning'>Product is added to your cart!</div>";
+      $status = "<div class='alert alert-info' role='alert'>Product has been added to your cart!</div>";
   }else{
       $array_keys = array_keys($_SESSION["shopping_cart"]);
       if(in_array($code,$array_keys)) {
-    $status = "<div class='box' style='color:red;'>
-    Product is already added to your cart!</div>";	
+    $status = "<div class='alert alert-warning' role='alert'>Product is already in your cart!</div>";	
       } else {
       $_SESSION["shopping_cart"] = array_merge(
       $_SESSION["shopping_cart"],
@@ -76,7 +75,7 @@ $result = mysqli_query(
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-success" data-dismiss="modal">Keep shopping</button>
-        <button type="button" class="btn btn-info">Checkout</button>
+        <a href="cart.php" class="btn btn-info">Proceed to checkout</a>
       </div>
     </div>
   </div>

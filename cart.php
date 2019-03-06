@@ -1,3 +1,32 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+    }
+$status="";
+if (isset($_POST['action']) && $_POST['action']=="remove"){
+if(!empty($_SESSION["shopping_cart"])) {
+    foreach($_SESSION["shopping_cart"] as $key => $value) {
+      if($_POST["code"] == $key){
+      unset($_SESSION["shopping_cart"][$key]);
+      $status = "<div class='alert alert-warning' role='alert'>Product has been removed from your cart!</div>";
+      }
+      if(empty($_SESSION["shopping_cart"]))
+      unset($_SESSION["shopping_cart"]);
+      }		
+}
+}
+ 
+if (isset($_POST['action']) && $_POST['action']=="change"){
+  foreach($_SESSION["shopping_cart"] as &$value){
+    if($value['code'] === $_POST["code"]){
+        $value['quantity'] = $_POST["quantity"];
+        break; // Stop the loop after we've found the product
+    }
+}
+  	
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,115 +48,87 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="https://use.fontawesome.com/c560c025cf.js"></script>
 </head>
+
 
 <?php 
  include "headerNav.php";
  ?>
 
-<!-- Shopping cart -->
-<div class="container">
-   <div class="card shopping-cart">
-            <div class="card-header bg-dark text-light">
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                Shopping cart
-                <a href="index.php" class="btn btn-outline-info btn-sm pull-right">Continue shopping</a>
-                <div class="clearfix"></div>
-            </div>
-            <div class="card-body">
-
-                    <!-- PRODUCT -->
-                    <div class="row">
-                        <div class="col-12 col-sm-12 col-md-2 text-center">
-                                <img class="img-responsive" src="http://placehold.it/120x80" alt="prewiew" width="120" height="80">
-                        </div>
-                        <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
-                            <h4 class="product-name"><strong>Product Name</strong></h4>
-                            <h4>
-                                <small>Product description</small>
-                            </h4>
-                        </div>
-                        <div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
-                            <div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
-                                <h6><strong>25.00 <span class="text-muted">x</span></strong></h6>
-                            </div>
-                            <div class="col-4 col-sm-4 col-md-4">
-                                <div class="quantity">
-                                    <input type="button" value="+" class="plus">
-                                    <input type="number" step="1" max="99" min="1" value="1" title="Qty" class="qty"
-                                           size="4">
-                                    <input type="button" value="-" class="minus">
-                                </div>
-                            </div>
-                            <div class="col-2 col-sm-2 col-md-2 text-right">
-                                <button type="button" class="btn btn-outline-danger btn-xs">
-                                    <i class="fa fa-trash" aria-hidden="true"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <!-- END PRODUCT -->
-                    <!-- PRODUCT -->
-                    <div class="row">
-                        <div class="col-12 col-sm-12 col-md-2 text-center">
-                                <img class="img-responsive" src="http://placehold.it/120x80" alt="prewiew" width="120" height="80">
-                        </div>
-                        <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
-                            <h4 class="product-name"><strong>Product Name</strong></h4>
-                            <h4>
-                                <small>Product description</small>
-                            </h4>
-                        </div>
-                        <div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
-                            <div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
-                                <h6><strong>25.00 <span class="text-muted">x</span></strong></h6>
-                            </div>
-                            <div class="col-4 col-sm-4 col-md-4">
-                                <div class="quantity">
-                                    <input type="button" value="+" class="plus">
-                                    <input type="number" step="1" max="99" min="1" value="1" title="Qty" class="qty"
-                                           size="4">
-                                    <input type="button" value="-" class="minus">
-                                </div>
-                            </div>
-                            <div class="col-2 col-sm-2 col-md-2 text-right">
-                                <button type="button" class="btn btn-outline-danger btn-xs">
-                                    <i class="fa fa-trash" aria-hidden="true"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <!-- END PRODUCT -->
-                <div class="pull-right">
-                    <a href="" class="btn btn-outline-secondary pull-right">
-                        Update shopping cart
-                    </a>
-                </div>
-            </div>
-            <div class="card-footer">
-                <div class="coupon col-md-5 col-sm-5 no-padding-left pull-left">
-                    <div class="row">
-                        <div class="col-6">
-                            <input type="text" class="form-control" placeholder="Coupon code">
-                        </div>
-                        <div class="col-6">
-                            <input type="submit" class="btn btn-default" value="Use coupon">
-                        </div>
-                    </div>
-                </div>
-                <div class="pull-right" style="margin: 10px">
-                    <a href="checkout.php" class="btn btn-success pull-right">Checkout</a>
-                    <div class="pull-right" style="margin: 5px">
-                        Total price: <b>50.00€</b>
-                    </div>
-                </div>
-            </div>
-        </div>
+<section class="mb-4">
+<div class="cart">
+<?php
+if(isset($_SESSION["shopping_cart"])){
+    $total_price = 0;
+?>	
+<table class="table">
+<tbody>
+<tr>
+<td></td>
+<td>ITEM NAME</td>
+<td>QUANTITY</td>
+<td>UNIT PRICE</td>
+<td>ITEMS TOTAL</td>
+</tr>	
+<?php		
+foreach ($_SESSION["shopping_cart"] as $product){
+?>
+<tr>
+<td>
+<img src='<?php echo $product["image"]; ?>' width="50" height="40" />
+</td>
+<td><?php echo $product["name"]; ?>
+<form method='post' action=''>
+<input type='hidden' name='code' value="<?php echo $product["code"]; ?>" />
+<input type='hidden' name='action' value="remove" />
+<button type='submit' class='btn btn-danger btn-sm'><i class="fas fa-trash-alt"></i></button>
+</form>
+</td>
+<td>
+<form method='post' action=''>
+<input type='hidden' name='code' value="<?php echo $product["code"]; ?>" />
+<input type='hidden' name='action' value="change" />
+<select name='quantity' class='quantity' onChange="this.form.submit()">
+<option <?php if($product["quantity"]==1) echo "selected";?>
+value="1">1</option>
+<option <?php if($product["quantity"]==2) echo "selected";?>
+value="2">2</option>
+<option <?php if($product["quantity"]==3) echo "selected";?>
+value="3">3</option>
+<option <?php if($product["quantity"]==4) echo "selected";?>
+value="4">4</option>
+<option <?php if($product["quantity"]==5) echo "selected";?>
+value="5">5</option>
+</select>
+</form>
+</td>
+<td><?php echo "$".$product["price"]; ?></td>
+<td><?php echo "$".$product["price"]*$product["quantity"]; ?></td>
+</tr>
+<?php
+$total_price += ($product["price"]*$product["quantity"]);
+}
+?>
+<tr>
+<td colspan="5" align="right">
+<strong>TOTAL: <?php echo "$".$total_price; ?></strong>
+</td>
+</tr>
+</tbody>
+</table>		
+  <?php
+}else{
+	echo "<h3>Your cart is empty!</h3>";
+	}
+?>
 </div>
-
+ 
+<div style="clear:both;"></div>
+ 
+<div class="message_box" style="margin:10px 0px;">
+<?php echo $status; ?>
+</div>
+</section>
 
 <?php 
  include "footer.php";

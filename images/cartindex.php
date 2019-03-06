@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+    }
 include('db.php');
 $status="";
 if (isset($_POST['code']) && $_POST['code']!=""){

@@ -54,11 +54,15 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
  ?>
 
 <section class="mb-4">
+<div class="jumbotron">
 <div class="cart">
 <?php
 if(isset($_SESSION["shopping_cart"])){
     $total_price = 0;
 ?>	
+<div class="message_box" style="margin:10px 0px;">
+<?php echo $status; ?><br>
+</div>
 <table class="table">
 <tbody>
 <tr>
@@ -75,7 +79,7 @@ foreach ($_SESSION["shopping_cart"] as $product){
 ?>
 <tr>
 <td>
-<img src='<?php echo $product["image"]; ?>' width="50" height="40" />
+<img src='<?php echo $product["image"]; ?>' width="50" height="50" />
 </td>
 <td><?php echo $product["name"]; ?>
 </form>
@@ -110,8 +114,10 @@ $total_price += ($product["price"]*$product["quantity"]);
 }
 ?>
 <tr>
+<td></td>
 <td colspan="5" align="right">
-<strong>TOTAL: <?php echo "$".$total_price; ?></strong>
+<br><br><strong>TOTAL: <?php echo "$".$total_price; ?></strong>
+<br><br><a href="checkout.php" class="btn btn-success">Check out</a>
 </td>
 </tr>
 </tbody>
@@ -123,10 +129,6 @@ $total_price += ($product["price"]*$product["quantity"]);
 ?>
 </div>
  
-<div style="clear:both;"></div>
- 
-<div class="message_box" style="margin:10px 0px;">
-<?php echo $status; ?>
 </div>
 </section>
 

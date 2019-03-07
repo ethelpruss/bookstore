@@ -26,6 +26,7 @@
 
 <!--Section: Contact v.2-->
 <section class="mb-4">
+<div class="jumbotron">
 
     <!--Section heading-->
     <h2 class="h1-responsive font-weight-bold text-left my-4">Contact us</h2>
@@ -101,6 +102,7 @@
 
     </div>
 </section>
+</div>
 
 <!--Section: Contact v.2-->
 

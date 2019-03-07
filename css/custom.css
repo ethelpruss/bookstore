@@ -1,30 +1,84 @@
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-      background-color: #9fb18e !important;
-    }
+/* Header */ 
+.masthead {
+  height: 10vh;
+  min-height: 260px;
+  background-image: url('../images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+   
+   
+/* Navbar */ 
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  background-color: #9fb18e !important;
+}
     
-    .navbar-brand {
-      color: #b04e3b !important;
-    }
+.navbar-brand {
+  color: #b04e3b !important;
+}
 
-    .fa.fa-shopping-cart
-    {
-      color: #b04e3b !important;
-    }
+.fa.fa-shopping-cart {
+  color: #b04e3b !important;
+}
 
-    .fa.fa-square.fa-stack-2x
-    {
-      color: #fff !important;
-    }
+.fa.fa-square.fa-stack-2x {
+  color: #fff !important;
+}
 
-    /* Add a gray background color and some padding to the footer */
+/* Feature */
+#feature {
+  height: 10vh;
+  min-height: 350px;
+  background-image: url('/bookstore/images/feature.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+    
+    /* Footer */
     footer {
       background-color: #9fb18e !important;
       padding: 0;
       margin: 0;
     }
+
+   /* Buttons */ 
+    
+    .btn.btn-success{
+      background-color: #63a261;
+      border-color: #63a261;
+    }
+    .btn.btn-primary{
+      background-color: rgb(201, 141, 118);
+      border-color: rgb(201, 141, 118);
+    }
+
+    .btn.btn-primary:hover
+    {
+      background-color: #b04e3b !important;
+      border-color:#b04e3b;
+    }
+        
+    .btn.btn-info{
+      background-color: #202333;
+      border-color: #202333;
+    }
+
+    .btn.btn-warning{
+      background-color: #e19229;
+      border-color: #e19229;
+    }
+
+    .btn.btn-danger{
+      background-color: #f44336;
+      border-color: #f44336;
+    }
+
 
     .thumbnail .img-responsive  {
       display: block;
@@ -33,29 +87,12 @@
       margin:0 auto;
 }
 
-    .masthead {
-      height: 10vh;
-      min-height: 260px;
-      background-image: url('../images/background.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
 
     section.mb-4{
     padding: 100px 400px;
 
     }
     
-    .btn.btn-success{
-        background-color:#486470;
-        border: none;
-      }
-
-    .btn.btn-success:hover{
-        background-color:#486470f1;
-      }
-
     footer.jumbotron{
         background-color: #7f816f;
         justify-content: right;

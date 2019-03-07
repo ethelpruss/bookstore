@@ -1,3 +1,16 @@
+<div class= "jumbotron text-center"><br><h3>
+<?php
+if ($_SESSION['type'] == 'ebook')
+  echo "E-books";
+else if ($_SESSION['type'] == 'book')
+  echo "Books";
+else if ($_SESSION['type'] == 'audiobook')
+  echo "Audiobooks";
+?>
+</h3><br><br></div>
+<div class="container-fluid bg-3 text-center"> 
+<div class="row">
+
 <div class="row">
 <?php
 include "db.php";
@@ -35,7 +48,7 @@ $result = mysqli_query(
     echo '</div>';
     echo '<div class="caption">';
     echo '<p class="text-secondary">' . $price . '</p>';
-    echo '<button type="button" class="btn btn-success" data-toggle="modal" data-target="#tocartModal">Add to cart</button>';
+    echo '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tocartModal">Add to cart</button>';
     echo '</div>';
     echo '</div>';
     echo '<br><br><br></div>';
@@ -74,9 +87,11 @@ $result = mysqli_query(
       <?php echo $status; ?>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-success" data-dismiss="modal">Keep shopping</button>
-        <a href="cart.php" class="btn btn-info">Proceed to checkout</a>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Keep shopping</button>
+        <a href="cart.php" class="btn btn-success">Proceed to checkout</a>
       </div>
     </div>
   </div>
 </div>
+</div>
+<div class= "jumbotron"></div>

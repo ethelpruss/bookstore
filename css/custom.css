@@ -18,6 +18,8 @@
     
 .navbar-brand {
   color: #b04e3b !important;
+  filter: drop-shadow(0 0 0.2rem #ffffff);
+
 }
 
 .fa.fa-shopping-cart {
@@ -29,14 +31,14 @@
 }
 
 /* Feature */
-#feature {
-  height: 10vh;
-  min-height: 350px;
-  background-image: url('/bookstore/images/feature.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 
+
+#spacer {
+margin-bottom: 0rem;
+}
+
+#feature img {
+  filter: opacity(85%)!important;
 }
 
     
@@ -49,13 +51,19 @@
 
    /* Buttons */ 
     
+   .btn.btn-light{
+    filter: drop-shadow(0 0 0.2rem #cecece);
+   }
     .btn.btn-success{
       background-color: #63a261;
       border-color: #63a261;
+      filter: drop-shadow(0 0 0.13rem #265e24);
+
     }
     .btn.btn-primary{
       background-color: rgb(201, 141, 118);
       border-color: rgb(201, 141, 118);
+      filter: drop-shadow(0 0 0.13rem #865a48);
     }
 
     .btn.btn-primary:hover

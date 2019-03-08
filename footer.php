@@ -32,4 +32,4 @@
 </footer>
 </body>
 </html>
-<script src="/bookstore/javascript/contact.js"></script>
+<script src="/bookstore/javascript/contact.js" type="text/javascript" ></script>

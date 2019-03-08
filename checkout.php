@@ -27,7 +27,7 @@
 
 <section class="mb-4">
 <div class="jumbotron">
-    <h1>Checkout</h1> 
+    <h1>Checkout</h1><br> 
     <form>
   <div class="form-row">
     <div class="form-group col-md-6">
@@ -74,16 +74,16 @@
         <option>...</option>
       </select>
   </div>
-  </form>     
+      
 
 <br>
 <div class="float-right">
-<a class="btn btn-primary" href="cart.php">Return to cart</a>
-<button type="submit" class="btn btn-success">Proceed to payment options</button>
+<a class="btn btn-primary" href="cart.php" id="returnButton">Return to cart</a>
+<button type="submit" class="btn btn-success" id="paymentButton">Proceed to payment options</button>
+</form> 
 </div>
 </div>
 </section>
-
 
 <?php 
  include "footer.php";

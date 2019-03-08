@@ -52,8 +52,9 @@ margin-bottom: 0rem;
    /* Buttons */ 
     
    .btn.btn-light{
-    filter: drop-shadow(0 0 0.2rem #cecece);
+    filter: drop-shadow(0 0 0.13rem #cecece);
    }
+
     .btn.btn-success{
       background-color: #63a261;
       border-color: #63a261;
@@ -70,42 +71,46 @@ margin-bottom: 0rem;
     {
       background-color: #b04e3b !important;
       border-color:#b04e3b;
+      filter: drop-shadow(0 0 0.13rem #865a48);
     }
         
     .btn.btn-info{
       background-color: #202333;
       border-color: #202333;
+      filter: drop-shadow(0 0 0.13rem #10111b);
     }
 
     .btn.btn-warning{
       background-color: #e19229;
       border-color: #e19229;
+      filter: drop-shadow(0 0 0.13rem #a5691c);
     }
 
     .btn.btn-danger{
       background-color: #f44336;
       border-color: #f44336;
+      filter: drop-shadow(0 0 0.13rem #b42a20);
     }
 
+    #returnButton,
+    #paymentButton{
+      margin-right: 10px;
+    }
 
-    .thumbnail .img-responsive  {
+   /* Product images */ 
+  .thumbnail .img-responsive  {
       display: block;
       max-width: 40%;
       height: auto;
       margin:0 auto;
 }
 
-
+   /* Sections */ 
     section.mb-4{
     padding: 100px 400px;
 
     }
     
-    footer.jumbotron{
-        background-color: #7f816f;
-        justify-content: right;
-        text-align: right;
-    }
 
     .list-group-item {
         float: left;

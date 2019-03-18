@@ -17,7 +17,7 @@
 		<i class="fa fa-credit-card"></i> Credit Card</a></li>
 	<li class="nav-item">
 		<a class="nav-link" data-toggle="pill" href="#nav-tab-paypal">
-		<i class="fab fa-paypal"></i>  Paypal</a></li>
+		<i class="fab fa-paypal"></i>  PayPal</a></li>
 	<li class="nav-item">
 		<a class="nav-link" data-toggle="pill" href="#nav-tab-bank">
 		<i class="fa fa-university"></i>  Bank Transfer</a></li>
@@ -66,9 +66,9 @@
 	</form>
 </div> <!-- tab-pane.// -->
 <div class="tab-pane fade" id="nav-tab-paypal">
-<p>Paypal is easiest way to pay online</p>
+<p>PayPal is easiest way to pay online</p>
 <p>
-<a  href="https://www.paypal.com/us/signin" role="button" class="btn" id="paypalButton"> <i class="fab fa-paypal"></i> Log into Paypal </a>
+<a  href="https://www.paypal.com/us/signin" role="button" class="btn" id="paypalButton"> <i class="fab fa-paypal"></i> Log into PayPal </a>
 </p>
 <p><strong>Note:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. </p>

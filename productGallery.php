@@ -1,3 +1,4 @@
+<script src="/bookstore/javascript/addToCart.js"></script>
 <div class= "jumbotron text-center">
   <br />
   <h3>
@@ -17,8 +18,10 @@
 <div class="container-fluid bg-3 text-center"> 
   <div class="row">
     <div class="row">
+
       <?php
         include "db.php";
+        include "addproduct.php";
         $type = $_SESSION['type'];
         $query = "SELECT * FROM `product` WHERE `type` = '$type'";
         $result = mysqli_query(
@@ -26,17 +29,19 @@
           $query
         );
 
-        // Check if the session storage doesnt have an array for the cart, if it doesn't: create a new empty one
+        /* Check if the session storage doesnt have an array for the cart, if it doesn't: create a new empty one
         if(empty($_SESSION["shopping_cart"])) {
           $_SESSION["shopping_cart"] = array();
-        }
+        }*/
 
         foreach(mysqli_fetch_all($result, MYSQLI_ASSOC) as $row){
+        $idproduct = $row['idproduct'];  
         $name = $row['name'];
         $code = $row['code'];
         $price = $row['price'];
         $image = $row['image'];
-        $id = $row['idproduct'];
+        $description = $row['description'];
+        $stock = $row['stock'];
 
         /*$cartArray = array(
           $code=>array(
@@ -59,29 +64,14 @@
           echo '</div>';
           echo '<div class="caption">';
           echo '<p class="text-secondary">' . $price . '</p>';
-          echo '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tocartModal">Add to cart</button>';
-          echo '<button type="button" class="btn btn-primary" onclick="addToCart(' . $code . ')">Add to cart</button>';
+          echo '<button type="button" class="btn btn-primary" id="'.$idproduct.'" data-toggle="modal" data-target="#tocartModal">Add to cart</button>';
           echo '</div>';
           echo '</div>';
           echo '<br><br><br></div>';
-
-          /*if(empty($_SESSION["shopping_cart"])) {
-            //$_SESSION["shopping_cart"] = $cartArray;
-            $_SESSION["shopping_cart"] = array();
-            $status = "<div class='alert alert-info' role='alert'>Product has been added to your cart!</div>";
-          }else{
-            $array_keys = array_keys($_SESSION["shopping_cart"]);
-            if(in_array($code,$array_keys)) {
-              var_dump($array_keys);
-              $status = "<div class='alert alert-warning' role='alert'>Product is already in your cart!</div>";	
-            } else {
-              //$_SESSION["shopping_cart"] = array_merge($_SESSION["shopping_cart"], $cartArray);
-              $status = "<div class='alert alert-info' role='alert'>Product has been added to your cart!</div>";
-            }
-          }*/
         }
       ?>
     </div>
+
 <!-- Modal -->
 <div class="modal fade" id="tocartModal" tabindex="-1" role="dialog" aria-labelledby="tocartModalTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">

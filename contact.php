@@ -1,28 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Bookstore</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<!-- Custom css -->
-<link rel="stylesheet" type="text/css" href="/bookstore/css/custom.css">
-<!-- Fontawesome -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 <?php 
- include "headerNav.php";
- ?>
+    include "dependencies.php";
+    echo '<body>';
+    include "headerNav.php";
+?>
 
 <!--Section: Contact v.2-->
 <section class="mb-4">
@@ -32,9 +15,16 @@
     <h2 class="h1-responsive font-weight-bold text-left my-4">Contact us</h2>
     <!--Section description-->
     <p class="text-left w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly.</p>
+
+    
     <div class="row">
         <!--Grid column-->
         <div class="col-md-9 mb-md-0 mb-5">
+        
+            <div class="alert alert-danger" id="status" role='alert'>
+                <p></p>
+            </div>   
+
             <form id="contact-form" name="contact-form" action="mail.php" method="POST">
 
                 <!--Grid row-->
@@ -94,10 +84,6 @@
             </form>
 
 
-            <div id="status">
-            <p></p>
-            </div>
-        </div>
         <!--Grid column-->
 
     </div>
@@ -110,4 +96,6 @@
  include "footer.php";
 ?>
 
-<script src="/bookstore/javascript/contact.js"></script>
+</body>
+</html>
+<script src="/bookstore/javascript/contact.js" type="text/javascript" ></script>

@@ -1,3 +1,4 @@
+<!-- Footer -->
 <footer class="jumbotron text-right" style="margin-bottom:0">
 
   <div class = "row text-center">
@@ -30,6 +31,3 @@
   </div>
 
 </footer>
-</body>
-</html>
-<script src="/bookstore/javascript/contact.js" type="text/javascript" ></script>

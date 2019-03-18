@@ -1,6 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <?php 
- include "dependencies.php";
- include "headerNav.php";
+    include "dependencies.php";
+    echo '<body>';
+    include "headerNav.php";
 ?>
 
 <div class="jumbotron" id="spacer"></div>
@@ -34,12 +38,12 @@
 </div>
 </div>
 </section>
+</div>
 
 <?php
 $_SESSION['type'] = 'book';
 include "productGallery.php";
 ?>
-</div>
 
 <?php 
  include "footer.php";

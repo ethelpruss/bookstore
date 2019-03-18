@@ -1,16 +1,15 @@
-<?php 
- include "dependencies.php";
- include "headerNav.php";
-?>
-
-<?php
-$_SESSION['type'] = 'book';
-include "productGallery.php";
-?>
-</div>
+<!DOCTYPE html>
+<html lang="en">
 
 <?php 
- include "footer.php";
+    include "dependencies.php";
+    echo "<body>";
+    include "headerNav.php";
+
+    $_SESSION['type'] = 'book';
+    include "productGallery.php";
+
+    include "footer.php";
 ?>
 
 </body>

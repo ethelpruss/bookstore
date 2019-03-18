@@ -1,3 +1,4 @@
+<!-- Send e-mail -->
 <?php
 header('Location: ' . $_SERVER['HTTP_REFERER']);
 if(isset( $_POST['name']))
@@ -35,3 +36,6 @@ $mailheader = "From: $email \r\n";
 mail($recipient, $subject, $content, $mailheader) or die("Error!");
 echo "Email sent!";
 ?>
+
+<script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
+<script>paypal.Buttons().render('body');</script>

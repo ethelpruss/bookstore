@@ -188,3 +188,17 @@ margin-bottom: 0rem;
   .navbar-brand{
     padding-left: 30px;
   }
+
+  .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    color: #fff;
+    background-color: #202333;
+  }
+
+  a{
+   color: #202333;
+  }
+
+  #paypalButton{
+    background-color: #0070ba;
+    color: #fff;
+  }

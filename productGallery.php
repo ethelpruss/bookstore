@@ -1,15 +1,17 @@
 <script src="/bookstore/javascript/addToCart.js"></script>
-<div class= "jumbotron text-center">
+<div class= "jumbotron text-center" id="catalogTitleJumbo">
   <br />
   <h3>
   <?php
     if ($_SESSION['type'] == 'ebook') {
       echo "E-books";
-    } else if ($_SESSION['type'] == 'book') {
+    } 
+    else if ($_SESSION['type'] == 'book') {
       echo "Books";
-    } else if ($_SESSION['type'] == 'audiobook') {
+    } 
+    else if ($_SESSION['type'] == 'audiobook') {
       echo "Audiobooks";
-    }
+    }    
   ?>
   </h3>
   <br />

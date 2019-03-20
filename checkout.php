@@ -8,7 +8,7 @@
 ?>
 
 
-<section class="mb-4">
+<div class="container" id="checkoutContainer">
 <div class="jumbotron">
     <h1>Checkout</h1><br> 
     <form>
@@ -65,7 +65,7 @@
 </form> 
 </div>
 </div>
-</section>
+</div>
 
 <?php 
  include "footer.php";

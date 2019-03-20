@@ -6,6 +6,9 @@
     echo '<body>';
     include "headerNav.php";
 ?>
+<script src="/bookstore/javascript/addToCart.js"></script>
+
+<body>
 
 <?php
 if (session_status() == PHP_SESSION_NONE) {
@@ -36,7 +39,7 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
 }
 ?>
 
-<section class="mb-4">
+<div class="container" id="cartContainer">
   <div class="jumbotron">
     <div class="cart">
       <?php
@@ -112,7 +115,7 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
     </div>
   
   </div>
-</section>
+    </div>
 
 <?php 
  include "footer.php";

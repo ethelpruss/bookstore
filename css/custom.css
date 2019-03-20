@@ -6,6 +6,8 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
    
    
@@ -19,7 +21,7 @@
 .navbar-brand {
   color: #b04e3b !important;
   filter: drop-shadow(0 0 0.2rem #ffffff);
-
+  padding-left: 30px;
 }
 
 .fa.fa-shopping-cart {
@@ -30,176 +32,177 @@
   color: #fff !important;
 }
 
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+  color: #fff;
+  background-color: #202333;
+}
+
 /* Feature */
-
-
 #spacer {
-margin-bottom: 0rem;
+  margin-bottom: 0rem;
 }
 
 #feature img {
   filter: opacity(85%)!important;
 }
 
-    
-    /* Footer */
-    footer {
-      background-color: #9fb18e !important;
-      padding: 0;
-      margin: 0;
-    }
-
-   /* Buttons */ 
-    
-   .btn.btn-light{
-    filter: drop-shadow(0 0 0.13rem #cecece);
-   }
-
-    .btn.btn-success{
-      background-color: #63a261;
-      border-color: #63a261;
-      filter: drop-shadow(0 0 0.13rem #265e24);
-
-    }
-    .btn.btn-primary{
-      background-color: rgb(201, 141, 118);
-      border-color: rgb(201, 141, 118);
-      filter: drop-shadow(0 0 0.13rem #865a48);
-    }
-
-    .btn.btn-primary:hover
-    {
-      background-color: #b04e3b !important;
-      border-color:#b04e3b;
-      filter: drop-shadow(0 0 0.13rem #865a48);
-    }
-        
-    .btn.btn-info{
-      background-color: #202333;
-      border-color: #202333;
-      filter: drop-shadow(0 0 0.13rem #10111b);
-    }
-
-    .btn.btn-warning{
-      background-color: #e19229;
-      border-color: #e19229;
-      filter: drop-shadow(0 0 0.13rem #a5691c);
-    }
-
-    .btn.btn-danger{
-      background-color: #f44336;
-      border-color: #f44336;
-      filter: drop-shadow(0 0 0.13rem #b42a20);
-    }
-
-    #returnButton,
-    #paymentButton{
-      margin-right: 10px;
-    }
-
-   /* Product images */ 
-  .thumbnail .img-responsive  {
-      display: block;
-      max-width: 40%;
-      height: auto;
-      margin:0 auto;
+  
+/* Footer */
+footer {
+  background-color: #9fb18e !important;
+  padding: 0;
+  margin: 0;
 }
 
-   /* Sections */ 
-    section.mb-4{
-    padding: 100px 400px;
+/* Buttons */ 
 
-    }
+.btn.btn-light{
+  filter: drop-shadow(0 0 0.13rem #cecece);
+}
+
+.btn.btn-success{
+  background-color: #63a261;
+  border-color: #63a261;
+  filter: drop-shadow(0 0 0.13rem #265e24);
+
+}
+.btn.btn-primary{
+  background-color: rgb(201, 141, 118);
+  border-color: rgb(201, 141, 118);
+  filter: drop-shadow(0 0 0.13rem #865a48);
+}
+
+.btn.btn-primary:hover
+{
+  background-color: #b04e3b !important;
+  border-color:#b04e3b;
+  filter: drop-shadow(0 0 0.13rem #865a48);
+}
     
+.btn.btn-info{
+  background-color: #202333;
+  border-color: #202333;
+  filter: drop-shadow(0 0 0.13rem #10111b);
+}
 
-    .list-group-item {
-        float: left;
-        border: 0 !important;
-        margin: 0px;
-        padding: 10px 0px;
-    }
+.btn.btn-warning{
+  background-color: #e19229;
+  border-color: #e19229;
+  filter: drop-shadow(0 0 0.13rem #a5691c);
+}
+
+.btn.btn-danger{
+  background-color: #f44336;
+  border-color: #f44336;
+  filter: drop-shadow(0 0 0.13rem #b42a20);
+}
+
+#returnButton,
+#paymentButton{
+  margin-right: 10px;
+}
+
+a{
+  color: #202333;
+}
+
+#paypalButton{
+  background-color: #0070ba;
+  color: #fff;
+  border-radius: 18px;
+}
+
+/* Product images */ 
+.thumbnail .img-responsive  {
+  display: block;
+  max-width: 40%;
+  height: auto;
+  margin:0 auto;
+}
+.list-group-item {
+    float: left;
+    border: 0 !important;
+    margin: 0px;
+    padding: 10px 0px;
+}
 
 
-     /* Shopping cart */
-    .quantity {
-      float: left;
-      margin-right: 15px;
-      background-color: #eee;
-      position: relative;
-      width: 80px;
-      overflow: hidden
-  }
-  
-  .quantity input {
-      margin: 0;
-      text-align: center;
-      width: 15px;
-      height: 15px;
-      padding: 0;
-      float: right;
-      color: #000;
-      font-size: 20px;
-      border: 0;
-      outline: 0;
-      background-color: #F6F6F6
-  }
-  
-  .quantity input.qty {
-      position: relative;
-      border: 0;
-      width: 100%;
-      height: 40px;
-      padding: 10px 25px 10px 10px;
-      text-align: center;
-      font-weight: 400;
-      font-size: 15px;
-      border-radius: 0;
-      background-clip: padding-box
-  }
-  
-  .quantity .minus, .quantity .plus {
-      line-height: 0;
-      background-clip: padding-box;
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      border-radius: 0;
-      color: #bbb;
-      font-size: 20px;
-      position: absolute;
-      height: 50%;
-      border: 0;
-      right: 0;
-      padding: 0;
-      width: 25px;
-      z-index: 3
-  }
-  
-  .quantity .minus:hover, .quantity .plus:hover {
-      background-color: #dad8da
-  }
-  
-  .quantity .minus {
-      bottom: 0
-  }
-  .shopping-cart {
-      margin-top: 20px;
-  }
+  /* Shopping cart */
+.quantity {
+  float: left;
+  margin-right: 15px;
+  background-color: #eee;
+  position: relative;
+  width: 80px;
+  overflow: hidden
+}
 
-  .navbar-brand{
-    padding-left: 30px;
-  }
+.quantity input {
+    margin: 0;
+    text-align: center;
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    float: right;
+    color: #000;
+    font-size: 20px;
+    border: 0;
+    outline: 0;
+    background-color: #F6F6F6
+}
 
-  .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
-    color: #fff;
-    background-color: #202333;
-  }
+.quantity input.qty {
+    position: relative;
+    border: 0;
+    width: 100%;
+    height: 40px;
+    padding: 10px 25px 10px 10px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 15px;
+    border-radius: 0;
+    background-clip: padding-box
+}
 
-  a{
-   color: #202333;
-  }
+.quantity .minus, .quantity .plus {
+    line-height: 0;
+    background-clip: padding-box;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    color: #bbb;
+    font-size: 20px;
+    position: absolute;
+    height: 50%;
+    border: 0;
+    right: 0;
+    padding: 0;
+    width: 25px;
+    z-index: 3
+}
 
-  #paypalButton{
-    background-color: #0070ba;
-    color: #fff;
-    border-radius: 18px;
-  }
+.quantity .minus:hover, .quantity .plus:hover {
+    background-color: #dad8da
+}
+
+.quantity .minus {
+    bottom: 0
+}
+.shopping-cart {
+    margin-top: 20px;
+}
+
+/* Containers */ 
+
+#contactContainer, #aboutContainer, #checkoutContainer, #cartContainer{
+  margin-top: 2rem;
+}
+
+#contactJumbo{
+  padding-left: 20%;
+}
+
+#aboutJumbo{
+  padding-left: 10%;
+  padding-right: 10%;
+}

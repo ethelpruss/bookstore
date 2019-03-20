@@ -34,6 +34,8 @@
           $_SESSION["shopping_cart"] = array();
         }*/
 
+        include "addProduct.php";
+
         foreach(mysqli_fetch_all($result, MYSQLI_ASSOC) as $row){
         $idproduct = $row['idproduct'];  
         $name = $row['name'];

@@ -24,18 +24,21 @@
       <li class="nav-item active">
         <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="sale.php">Sale</a>
+
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Products
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="sale.php">On sale</a>
+          <a class="dropdown-item" href="books.php">Books</a>
+          <a class="dropdown-item" href="ebooks.php">E-books</a>
+          <a class="dropdown-item" href="audiobooks.php">Audiobooks</a>
+        </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="books.php">Books</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="ebooks.php">E-books</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="audiobooks.php">Audiobooks</a>
-      </li>
+
+      
+
       <li class="nav-item">
         <a class="nav-link" href="about.php">About us</a>
       </li>
